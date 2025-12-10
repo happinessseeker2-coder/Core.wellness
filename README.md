@@ -1,21 +1,18 @@
 [ai_studio_code.html](https://github.com/user-attachments/files/24073390/ai_studio_code.html)
 
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Designer | 追川大輝</title>
-    <meta name="description" content="あなたの悩みに寄り添い、内側から健康をデザインする。Wellness Designer 追川大輝の公式サイト。">
-    
-    <!-- Google Fonts -->
+    <title>Wellness Designer | 富沢心乙</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome (アイコン用) -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS (外部ファイルにする場合は linkタグに変更してください) -->
     <style>
         /* === CSS Variables === */
         :root {
@@ -231,7 +228,8 @@
             justify-content: center;
             text-align: center;
             /* Placeholder Image for Fitness/Wellness */
-            background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            /* ヒーロー画像の変更 */
+            background-image: url('https://storage.googleapis.com/gemini-244349197-f58c49e798e04e9c8e23924f334d75d7/image_generation_content/0'); 
             background-size: cover;
             background-position: center;
         }
@@ -282,7 +280,9 @@
             height: 500px; /* Adjust as needed */
             object-fit: cover;
             border-radius: 4px;
-            filter: grayscale(30%); /* Slightly desaturated for mood */
+            /* 富沢さんの画像に変更 */
+            content: url('https://storage.googleapis.com/gemini-244349197-f58c49e798e04e9c8e23924f334d75d7/image_generation_content/0'); 
+            filter: grayscale(30%); 
         }
 
         .about-text h3 {
@@ -321,10 +321,29 @@
             line-height: 2.2;
             font-weight: 300;
         }
+        
+        /* 経営理念の英語強調スタイル */
+        .philosophy-english {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .philosophy-japanese {
+            font-size: 1rem;
+            color: var(--silver);
+            margin-bottom: 30px;
+            display: block;
+        }
+
 
         /* === Benefits === */
         .benefits-grid {
             display: grid;
+            /* メリットを中央に寄せるために最大幅を設定 */
+            max-width: 1000px;
+            margin: 0 auto;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
@@ -462,187 +481,180 @@
             }
         }
     </style>
+
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <a href="#" class="logo">Wellness <span>Designer</span></a>
-        
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+<header class="header">
+    <a href="#" class="logo">Wellness <span>Designer</span></a>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+    </div>
 
-        <div class="nav-wrapper" id="nav-wrapper">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about" class="nav-link-item">自己紹介</a></li>
-                    <li><a href="#philosophy" class="nav-link-item">経営理念</a></li>
-                    <li><a href="#benefits" class="nav-link-item">学ぶメリット</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="#contact" class="btn header-btn">お問い合わせ</a>
-                <div class="header-sns">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <!-- X icon -->
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content fade-in-section">
-            <p class="hero-subtitle">WELLNESS DESIGNER</p>
-            <h1 class="hero-title">あなたの悩みに寄り添い、<br>内側から健康をデザインする</h1>
-            <a href="#contact" class="btn">無料カウンセリングを予約する</a>
-        </div>
-    </section>
-
-    <!-- Self Introduction Section -->
-    <section class="section-padding" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="fade-in-section">
-                    <!-- Placeholder for Oikawa's photo -->
-                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="追川大輝" class="about-img">
-                </div>
-                <div class="about-text fade-in-section">
-                    <h3>追川大輝</h3>
-                    <span class="about-role">Wellness Designer</span>
-                    <p class="about-desc">
-                        もともとパーソナルトレーナーをしていたが、お客様の悩みの種の改善が真の目的だと気づきました。<br><br>
-                        表面的な身体作りだけでなく、内面からのアプローチが不可欠であると感じ、ここから私はWellness Designerとして活動していくことにしました。
-                    </p>
-                    <a href="#contact" class="btn">お問い合わせ</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="section-padding" id="philosophy">
-        <div class="container">
-            <h2 class="section-title fade-in-section">経営理念</h2>
-            <div class="philosophy-card text-center fade-in-section">
-                <p class="philosophy-text">
-                    お客様一人ひとりの課題に深く寄り添い、<br>
-                    持続可能な健康と幸福をデザインし、<br>
-                    内側から真のウェルネスを実現するサポートを提供します。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="section-padding" id="benefits">
-        <div class="container">
-            <h2 class="section-title fade-in-section">Wellness Designerスクールで<br>学ぶメリット</h2>
-            
-            <div class="benefits-grid">
-                <!-- Merit 1 -->
-                <div class="benefit-item fade-in-section">
-                    <div class="benefit-icon">
-                        <i class="fa-solid fa-clipboard-user"></i>
-                    </div>
-                    <p class="benefit-text">あなただけの<br>オーダーメイド栄養プラン</p>
-                </div>
-                
-                <!-- Merit 2 -->
-                <div class="benefit-item fade-in-section">
-                    <div class="benefit-icon">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                    </div>
-                    <p class="benefit-text">内側から変わる<br>体と心の健康</p>
-                </div>
-                
-                <!-- Merit 3 -->
-                <div class="benefit-item fade-in-section">
-                    <div class="benefit-icon">
-                        <i class="fa-solid fa-infinity"></i>
-                    </div>
-                    <p class="benefit-text">継続できる<br>実践的なライフスタイル指導</p>
-                </div>
-                
-                <!-- Merit 4 -->
-                <div class="benefit-item fade-in-section">
-                    <div class="benefit-icon">
-                        <i class="fa-solid fa-handshake"></i>
-                    </div>
-                    <p class="benefit-text">個別サポートで<br>確実な目標達成</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-sns">
+    <div class="nav-wrapper" id="nav-wrapper">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link-item">自己紹介</a></li>
+                <li><a href="#philosophy" class="nav-link-item">経営理念</a></li>
+                <li><a href="#benefits" class="nav-link-item">学ぶメリット</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn header-btn">お問い合わせ</a>
+            <div class="header-sns">
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-            <div class="footer-links">
-                <a href="#">プライバシーポリシー</a>
-                <a href="#">お問い合わせ</a>
-            </div>
-            <p class="copyright">© 2023 Wellness Designer. All rights reserved.</p>
         </div>
-    </footer>
+    </div>
+</header>
 
-    <!-- JavaScript -->
-    <script>
-        // === スクロールアニメーション (Intersection Observer) ===
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null, // ビューポート
-                rootMargin: '0px',
-                threshold: 0.1 // 10%見えたら発火
-            };
+<section class="hero" id="home">
+    <div class="hero-content fade-in-section">
+        <p class="hero-subtitle">WELLNESS DESIGNER</p>
+        <h1 class="hero-title">あなたの悩みに寄り添い、<br>内側から健康をデザインする</h1>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">無料カウンセリングを予約する</a>
+    </div>
+</section>
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // 一度発火したら監視をやめる
-                    }
-                });
-            }, observerOptions);
+<section class="section-padding" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="fade-in-section">
+                <img src="https://storage.googleapis.com/gemini-244349197-f58c49e798e04e9c8e23924f334d75d7/image_generation_content/0" alt="富沢心乙" class="about-img">
+            </div>
+            <div class="about-text fade-in-section">
+                <h3>富沢心乙 <a href="https://profu.link/u/corewellness" target="_blank" style="font-size: 0.6em; color: var(--silver); margin-left: 10px; vertical-align: middle;">詳細プロフィールへ</a></h3>
+                <span class="about-role">Wellness Designer</span>
+                <p class="about-desc">
+                    もともとパーソナルトレーナーをしていたが、お客様の悩みの種の改善が真の目的だと気づきました。<br><br>
+                    表面的な身体作りだけでなく、内面からのアプローチが不可欠であると感じ、ここから私はWellness Designerとして活動していくことにしました。
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">お問い合わせ</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-            const fadeElements = document.querySelectorAll('.fade-in-section');
-            fadeElements.forEach(el => observer.observe(el));
-        });
+<section class="section-padding" id="philosophy">
+    <div class="container">
+        <h2 class="section-title fade-in-section">経営理念</h2>
+        <div class="philosophy-card text-center fade-in-section">
+            <h3 class="philosophy-english">
+                True Health<br>True Happiness
+            </h3>
+            <p class="philosophy-japanese">
+                真の健康と真の幸福
+            </p>
+            <p class="philosophy-text">
+                お客様一人ひとりの課題に深く寄り添い、<br>
+                持続可能な健康と幸福をデザインし、<br>
+                内側から真のウェルネスを実現するサポートを提供します。
+            </p>
+        </div>
+    </div>
+</section>
 
-        // === モバイルメニューのトグル機能 ===
-        const menuToggle = document.getElementById('mobile-menu');
-        const navWrapper = document.getElementById('nav-wrapper');
-        const navLinks = document.querySelectorAll('.nav-link-item');
-        const icon = menuToggle.querySelector('i');
-
-        menuToggle.addEventListener('click', () => {
-            navWrapper.classList.toggle('active');
+<section class="section-padding" id="benefits">
+    <div class="container">
+        <h2 class="section-title fade-in-section">Wellness Designerスクールで<br>学ぶメリット</h2>
+        
+        <div class="benefits-grid">
+            <div class="benefit-item fade-in-section">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-clipboard-user"></i>
+                </div>
+                <p class="benefit-text">あなただけの<br>オーダーメイド栄養プラン</p>
+            </div>
             
-            // アイコンの切り替え (ハンバーガー <-> バツ)
-            if (navWrapper.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        });
+            <div class="benefit-item fade-in-section">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-seedling"></i> </div>
+                <p class="benefit-text">体と心の健康は<br>栄養と生活習慣から変わっていく</p>
+            </div>
+            
+            <div class="benefit-item fade-in-section">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-infinity"></i>
+                </div>
+                <p class="benefit-text">継続できる<br>実践的なライフスタイル指導</p>
+            </div>
+            
+            <div class="benefit-item fade-in-section">
+                <div class="benefit-icon">
+                    <i class="fa-solid fa-handshake-angle"></i> </div>
+                <p class="benefit-text">個別サポートで<br>確実な目標達成</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // メニューリンクをクリックしたら閉じる
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navWrapper.classList.remove('active');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-sns">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">プライバシーポリシー</a>
+            <a href="mailto:Happiness.seeker2@gmail.com">Happiness.seeker2@gmail.com</a>
+        </div>
+        <p class="copyright">© 2023 Wellness Designer. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // === スクロールアニメーション (Intersection Observer) ===
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null, // ビューポート
+            rootMargin: '0px',
+            threshold: 0.1 // 10%見えたら発火
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // 一度発火したら監視をやめる
+                }
             });
+        }, observerOptions);
+
+        const fadeElements = document.querySelectorAll('.fade-in-section');
+        fadeElements.forEach(el => observer.observe(el));
+    });
+
+    // === モバイルメニューのトグル機能 ===
+    const menuToggle = document.getElementById('mobile-menu');
+    const navWrapper = document.getElementById('nav-wrapper');
+    const navLinks = document.querySelectorAll('.nav-link-item');
+    const icon = menuToggle.querySelector('i');
+
+    menuToggle.addEventListener('click', () => {
+        navWrapper.classList.toggle('active');
+        
+        // アイコンの切り替え (ハンバーガー <-> バツ)
+        if (navWrapper.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // メニューリンクをクリックしたら閉じる
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navWrapper.classList.remove('active');
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
