@@ -1,7 +1,6 @@
 [ai_studio_code.html](https://github.com/user-attachments/files/24073390/ai_studio_code.html)
-
-<!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
