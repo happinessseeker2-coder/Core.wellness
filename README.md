@@ -292,7 +292,7 @@
             
             <div class="person-card fade-in">
                 <div class="about-img">
-                    <img src="profile1.jpg" alt="Daiki Oikawa">
+                    <名称未設定フォルダ/PHD.JPG>
                 </div>
                 <div class="about-text">
                     <h3>追川 大輝</h3>
