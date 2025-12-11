@@ -23,7 +23,7 @@
             --accent: #bfa588;         /* ブロンズゴールド */
             --accent-hover: #a88f72;   
             --gradient: linear-gradient(135deg, #1c1c1a 0%, #333330 100%);
-            --header-h: 70px;![名称未設定フォルダ/PHD.JPG]
+            --header-h: 70px;![代替テキスト]
 
         /* === Reset & Base === */
         * { margin: 0; padding: 0; box-sizing: border-box; }
