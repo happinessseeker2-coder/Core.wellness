@@ -1,11 +1,5 @@
 <head>
-    # Wellness Designer
-
-![チーム写真](./images/PH1.jpeg "チーム写真")
-
-本質から整える健康を。追川大輝と富沢心乙による、経営者・プロフェッショナルのためのウェルネスプログラム。
-
-<!-- 以下にプロジェクト説明や使い方を続けてください -->    <meta charset="UTF-8">
+    <!-- 以下にプロジェクト説明や使い方を続けてください -->    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness Designer | Daiki Oikawa & munetsugu Tomizawa</title>
     <meta name="description" content="本質から整える健康を。追川大輝と富沢心乙による、経営者・プロフェッショナルのためのウェルネスプログラム。">
@@ -29,8 +23,7 @@
             --accent: #bfa588;         /* ブロンズゴールド */
             --accent-hover: #a88f72;   
             --gradient: linear-gradient(135deg, #1c1c1a 0%, #333330 100%);
-            --header-h: 70px;
-        }
+            --header-h: 70px;![代替テキスト](./images/photo.jpg "PH1")}
 
         /* === Reset & Base === */
         * { margin: 0; padding: 0; box-sizing: border-box; }
