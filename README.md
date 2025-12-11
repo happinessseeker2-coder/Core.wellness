@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -7,26 +8,29 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* === CSS Variables === */
+        /* === CSS Variables (New Palette) === */
         :root {
-            --bg-black: #1c1c1a;
-            --bg-dark-gray: #2a2a28;
-            --bg-light: #f2f0eb;
-            --text-white: #f7f7f4;
-            --text-black: #3a3a38;
-            --text-sub: #9e9e9b;
-            --accent: #bfa588;         /* 高級感のあるブロンズ（装飾用） */
+            /* ベース：深遠・安定・知性 */
+            --bg-base: #1A1F1D; 
+            --bg-card: #232926; /* ベースより少し明るい、カード用 */
             
-            /* 【変更点】脳が押しやすいと感じる「ビタミンオレンジ」 */
-            --btn-color: #FF8C00;       
-            --btn-hover: #E07B00;
+            /* テキスト：清潔・明瞭（可読性重視） */
+            --text-main: #E6E6E6;
+            --text-sub: #B0B5B2; /* 少し緑がかったグレー */
+            --text-dark: #1A1F1D; /* ゴールド背景用の濃い文字 */
+
+            /* アクセント（金）：富・成功・高品質 */
+            --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #B38728 100%);
+            --gold-text: #D4AF37; /* 文字として使う場合の単色ゴールド */
+
+            /* サブアクセント（セージグリーン）：調和・自然 */
+            --sage-green: #5D7266;
             
-            --gradient: linear-gradient(135deg, #1c1c1a 0%, #333330 100%);
             --header-h: 70px;
         }
 
@@ -35,8 +39,8 @@
         html { scroll-behavior: smooth; }
 
         body {
-            background-color: var(--bg-black);
-            color: var(--text-white);
+            background-color: var(--bg-base);
+            color: var(--text-main);
             font-family: 'Noto Sans JP', sans-serif;
             line-height: 1.9;
             letter-spacing: 0.05em;
@@ -57,51 +61,53 @@
         }
         .section-padding { padding: 100px 0; }
         
-        .bg-black { background-color: var(--bg-black); }
-        .bg-dark { background-color: var(--bg-dark-gray); }
-        .bg-light { background-color: var(--bg-light); color: var(--text-black); }
-        .bg-gradient { background: var(--gradient); }
-
+        /* 背景クラスの再定義 */
+        .bg-base { background-color: var(--bg-base); }
+        .bg-card { background-color: var(--bg-card); }
+        
         /* === Components === */
         
-        /* CTA Button (Orange) */
+        /* Gold Button (CTA) */
         .btn {
             display: inline-block; padding: 16px 45px; 
-            background-color: var(--btn-color); color: #fff; /* 白文字で視認性UP */
+            background: var(--gold-gradient); 
+            color: var(--text-dark); /* 金背景には黒文字で可読性と高級感を */
             font-weight: 700; font-size: 1rem; border-radius: 50px; 
             letter-spacing: 0.05em; transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
-            text-align: center; border: none;
+            box-shadow: 0 4px 15px rgba(191, 149, 63, 0.3);
+            text-align: center; border: none; position: relative; overflow: hidden;
         }
         .btn:hover { 
-            background-color: var(--btn-hover); 
             transform: translateY(-2px); 
-            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.6); 
+            box-shadow: 0 6px 25px rgba(191, 149, 63, 0.5); 
+            filter: brightness(1.1); /* ホバー時に少し輝く */
         }
 
-        /* Secondary Button (Outline) */
+        /* Outline Button (Sage Green) */
         .btn-outline {
-            background: transparent; border: 2px solid var(--accent); color: var(--accent);
+            background: transparent; border: 1px solid var(--sage-green); color: var(--text-main);
             padding: 14px 40px; font-weight: 700; border-radius: 50px;
         }
-        .btn-outline:hover { background: var(--accent); color: #1c1c1a; }
+        .btn-outline:hover { background: var(--sage-green); color: var(--text-main); }
 
+        /* Section Titles */
         .section-title { 
             font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 60px; 
-            text-align: center; position: relative; color: inherit;
+            text-align: center; position: relative; color: var(--text-main);
         }
+        /* 金色のアンダーライン */
         .section-title::after { 
-            content: ''; display: block; width: 50px; height: 3px; 
-            background: var(--accent); margin: 20px auto 0; 
+            content: ''; display: block; width: 60px; height: 3px; 
+            background: var(--gold-gradient); margin: 20px auto 0; 
         }
 
         /* Fixed CTA */
         .fixed-cta {
             position: fixed; bottom: 30px; right: 30px; z-index: 990;
-            background: var(--btn-color); color: #fff;
+            background: var(--gold-gradient); color: var(--text-dark);
             width: 60px; height: 60px; border-radius: 50%;
             display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 5px 20px rgba(255, 140, 0, 0.5);
+            box-shadow: 0 5px 20px rgba(191, 149, 63, 0.4);
             font-size: 1.5rem; transition: 0.3s;
         }
         .fixed-cta:hover { transform: scale(1.1); }
@@ -118,29 +124,30 @@
             position: fixed; top: 0; left: 0; width: 100%; height: var(--header-h);
             display: flex; justify-content: space-between; align-items: center;
             padding: 0 5%; z-index: 1000;
-            background: rgba(28, 28, 26, 0.9);
+            background: rgba(26, 31, 29, 0.9); /* Base color semi-transparent */
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        .logo { font-size: 1.4rem; font-weight: 700; color: var(--text-white); }
-        .logo span { color: var(--accent); }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--text-main); }
+        .logo span { color: var(--sage-green); /* アクセントにセージグリーン */ }
 
-        .menu-toggle { display: none; font-size: 1.5rem; color: var(--text-white); cursor: pointer; z-index: 1001; }
+        .menu-toggle { display: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer; z-index: 1001; }
         
         .nav-menu { display: flex; gap: 30px; }
-        .nav-link { font-size: 0.9rem; font-weight: 500; position: relative; }
-        .nav-link:hover { color: var(--accent); }
+        .nav-link { font-size: 0.9rem; font-weight: 500; position: relative; color: var(--text-main); }
+        .nav-link:hover { color: var(--gold-text); }
 
         @media (max-width: 900px) {
             .menu-toggle { display: block; }
             .nav-menu {
                 position: fixed; top: 0; right: -100%;
                 width: 70%; height: 100vh;
-                background: rgba(28, 28, 26, 0.95);
+                background: rgba(26, 31, 29, 0.98);
                 backdrop-filter: blur(15px);
                 flex-direction: column; justify-content: center; align-items: center;
                 gap: 40px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                 box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                border-left: 1px solid var(--sage-green);
             }
             .nav-menu.active { right: 0; }
             .nav-link { font-size: 1.2rem; }
@@ -149,34 +156,43 @@
         /* === Hero Section === */
         .hero {
             height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center;
-            background-image: url('hero.jpg'); /* 自然の背景画像 */
+            background-image: url('hero.jpg'); 
             background-size: cover; background-position: center;
-            background-color: var(--bg-black);
+            background-color: var(--bg-base);
         }
         .hero::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(28,28,26,0.9));
+            /* Deep Green Black Gradient Overlay */
+            background: linear-gradient(to bottom, rgba(26, 31, 29, 0.3), rgba(26, 31, 29, 0.95));
         }
         .hero-content { position: relative; z-index: 1; padding: 0 20px; max-width: 900px; }
-        .hero-sub { color: var(--accent); font-weight: 600; letter-spacing: 0.1em; display: block; margin-bottom: 20px; font-size: 1.1rem; }
+        
+        .hero-sub { 
+            color: var(--sage-green); /* 自然・調和 */
+            font-weight: 600; letter-spacing: 0.15em; display: block; margin-bottom: 20px; font-size: 1.1rem; 
+            text-transform: uppercase;
+        }
         .hero-title { 
-            font-size: clamp(1.6rem, 4vw, 2.8rem); line-height: 1.6; font-weight: 700; margin-bottom: 40px;
-            text-shadow: 0 5px 20px rgba(0,0,0,0.9); text-align: left;
+            font-size: clamp(1.6rem, 4vw, 2.8rem); line-height: 1.7; font-weight: 700; margin-bottom: 40px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8); text-align: left;
         }
         .hero-title span { display: block; margin-bottom: 15px; }
         
         /* === Profile Section === */
         .person-card {
             display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: center; margin-bottom: 80px;
+            background: rgba(255,255,255,0.02); /* わずかに背景を入れてカード化 */
+            padding: 30px; border-radius: 12px; border: 1px solid rgba(93, 114, 102, 0.2); /* セージグリーンの薄い枠 */
         }
         .about-img img { 
             height: 450px; object-fit: cover; border-radius: 4px; 
-            filter: grayscale(10%); transition: 0.5s; 
+            filter: grayscale(20%); transition: 0.5s; 
             background-color: #222;
         }
         .about-img:hover img { filter: grayscale(0%); }
-        .role { color: var(--accent); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 15px; }
-        .person-card h3 { font-size: 1.8rem; margin-bottom: 20px; }
+        .role { color: var(--sage-green); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 15px; }
+        .person-card h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--gold-text); } /* 名前を金文字に */
+        
         .person-card.reverse { grid-template-columns: 1.2fr 0.8fr; }
         .person-card.reverse .about-img { order: 2; }
         .person-card.reverse .about-text { order: 1; }
@@ -190,7 +206,12 @@
 
         /* === Philosophy === */
         .philosophy-text { text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
-        .philosophy-text strong { color: var(--accent); font-weight: 500; }
+        .philosophy-text strong { 
+            background: var(--gold-gradient); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            font-weight: 700; 
+        }
 
         /* === Merit (Detail Section) === */
         .merit-layout {
@@ -198,18 +219,27 @@
         }
         .merit-img img {
             width: 100%; height: 400px; object-fit: cover; border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid var(--sage-green);
         }
         .merit-list { display: flex; flex-direction: column; gap: 30px; }
-        .merit-item { display: flex; gap: 20px; align-items: flex-start; }
-        .merit-icon { 
-            width: 60px; height: 60px; background: #fff; border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; color: var(--btn-color); flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .merit-item { 
+            display: flex; gap: 20px; align-items: flex-start; 
+            padding: 20px; border-radius: 8px;
+            transition: 0.3s;
         }
-        .merit-content h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-black); }
-        .merit-content p { font-size: 0.95rem; color: #666; line-height: 1.7; margin-bottom: 0; }
+        .merit-item:hover { background: rgba(93, 114, 102, 0.1); } /* セージグリーンの背景ホバー */
+        
+        .merit-icon { 
+            width: 60px; height: 60px; 
+            background: var(--bg-card); /* カード色 */
+            border: 1px solid var(--sage-green); /* セージグリーンの枠 */
+            border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: var(--sage-green); flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .merit-content h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-main); }
+        .merit-content p { font-size: 0.95rem; color: var(--text-sub); line-height: 1.7; margin-bottom: 0; }
 
         @media (max-width: 900px) {
             .merit-layout { grid-template-columns: 1fr; }
@@ -220,59 +250,82 @@
         /* === Voices (Grid Layout) === */
         .voices-grid {
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自動調整グリッド */
-            gap: 20px; /* 隙間調整 */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
         .voice-card {
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            background: var(--bg-card); 
+            border: 1px solid rgba(255,255,255,0.05); /* 控えめな枠線 */
             padding: 30px; border-radius: 8px; height: 100%;
+            transition: 0.3s;
         }
+        .voice-card:hover { border-color: var(--sage-green); }
+
         .voice-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
         .voice-avt { 
-            width: 50px; height: 50px; background: #333; border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; color: #fff;
+            width: 50px; height: 50px; background: #111; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; color: var(--sage-green);
+            border: 1px solid var(--sage-green);
         }
-        .voice-meta h4 { font-size: 1rem; margin-bottom: 3px; }
+        .voice-meta h4 { font-size: 1rem; margin-bottom: 3px; color: var(--text-main); }
         .voice-meta span { color: var(--text-sub); font-size: 0.8rem; }
-        .voice-body { font-style: italic; color: var(--text-white); opacity: 0.9; font-size: 0.9rem; }
+        .voice-body { font-style: italic; color: var(--text-main); opacity: 0.8; font-size: 0.9rem; }
 
         /* === Flow & Price === */
         .flow-step { 
-            border-left: 3px solid var(--btn-color); padding-left: 30px; position: relative; margin-bottom: 40px; 
+            border-left: 3px solid var(--sage-green); padding-left: 30px; position: relative; margin-bottom: 40px; 
             max-width: 600px; margin-left: auto; margin-right: auto;
         }
         .flow-step::before {
             content: ''; position: absolute; left: -10px; top: 0; width: 16px; height: 16px; 
-            background: var(--btn-color); border-radius: 50%;
+            background: var(--sage-green); border-radius: 50%;
+            border: 2px solid var(--bg-base); /* 穴あき効果 */
         }
-        .flow-step h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-white); }
+        .flow-step h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--gold-text); }
         
         .price-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
         .price-card {
-            background: var(--text-white); color: var(--text-black); padding: 40px; border-radius: 16px; text-align: center;
+            background: var(--bg-card); color: var(--text-main); padding: 40px; border-radius: 16px; text-align: center;
             flex: 1; min-width: 300px; max-width: 450px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #eee;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05);
             position: relative; display: flex; flex-direction: column;
         }
-        .price-card.advance { border: 3px solid var(--btn-color); transform: scale(1.03); z-index: 10; }
+        /* アドバンスプラン（金枠） */
+        .price-card.advance { 
+            border: 2px solid transparent;
+            background-image: linear-gradient(var(--bg-card), var(--bg-card)), var(--gold-gradient);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            transform: scale(1.03); z-index: 10; 
+        }
         @media (max-width: 800px) { .price-card.advance { transform: scale(1); } }
 
         .price-tag { 
-            display: inline-block; background: var(--text-black); color: var(--text-white); padding: 5px 15px; 
+            display: inline-block; background: var(--sage-green); color: #fff; padding: 5px 15px; 
             border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; 
         }
-        .price-card.advance .price-tag { background: var(--btn-color); color: #fff; font-weight: bold; }
+        .price-card.advance .price-tag { background: var(--gold-gradient); color: var(--text-dark); font-weight: bold; }
 
-        .price-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; color: var(--text-black); }
-        .price-amount { font-size: 2rem; font-weight: 700; font-family: 'Montserrat', sans-serif; color: var(--text-black); margin-bottom: 20px; }
+        .price-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; color: var(--text-main); }
+        
+        .price-amount { 
+            font-size: 2.2rem; font-weight: 700; font-family: 'Montserrat', sans-serif; 
+            margin-bottom: 20px;
+            /* 数字を金グラデーションに */
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
         .price-list { text-align: left; margin-bottom: 40px; padding: 0 10px; flex-grow: 1; }
-        .price-list li { margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px; font-size: 0.95rem; }
-        .price-list i { color: var(--btn-color); margin-right: 10px; }
+        .price-list li { margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; font-size: 0.95rem; color: var(--text-sub); }
+        .price-list i { color: var(--sage-green); margin-right: 10px; }
+        .price-card.advance .price-list i { color: var(--gold-text); } /* アドバンスのチェックは金 */
 
         /* === Footer === */
-        .footer { background: var(--bg-black); padding: 80px 0 30px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
+        .footer { background: #111; padding: 80px 0 30px; border-top: 1px solid var(--sage-green); text-align: center; }
         .footer-sns a { color: var(--text-sub); font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
-        .footer-sns a:hover { color: var(--btn-color); }
+        .footer-sns a:hover { color: var(--gold-text); }
         .copyright { margin-top: 40px; color: var(--text-sub); font-size: 0.75rem; }
 
         /* Animation */
@@ -309,7 +362,7 @@
             <span class="hero-sub fade-in">For Pilates Instructors</span>
             <h1 class="hero-title fade-in">
                 ピラティスインストラクターの皆様へ。<br><br>
-                <span style="font-size: 0.6em; font-weight: 500; line-height: 1.8;">
+                <span style="font-size: 0.6em; font-weight: 500; line-height: 1.8; color: var(--text-main);">
                 講習だけでなく栄養の知識を深めることで、<br>
                 あなたのスキルを飛躍的に向上させ、<br>
                 より多くの顧客獲得に繋げましょう。<br>
@@ -322,7 +375,7 @@
     </section>
 
     <!-- Profile Section -->
-    <section id="about" class="section-padding bg-dark">
+    <section id="about" class="section-padding bg-base">
         <div class="container">
             <h2 class="section-title fade-in">Professionals</h2>
             
@@ -357,8 +410,25 @@
         </div>
     </section>
 
-    <!-- Merit (Updated with Details & Image) -->
-    <section id="merit" class="section-padding bg-light">
+    <!-- Philosophy -->
+    <section class="section-padding bg-card">
+        <div class="container fade-in">
+            <h2 class="section-title">Philosophy</h2>
+            <div class="philosophy-text">
+                <p>
+                    私たちが提供するのは、単なるトレーニングや食事指導ではありません。<br>
+                    それは、<strong>生涯の資産となる「自己管理能力」</strong>です。
+                </p>
+                <p>
+                    都市生活の中で乱れがちな自律神経を整え、<br>
+                    本来の自分を取り戻すための時間を、私たちがデザインします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merit (Detail Section) -->
+    <section id="merit" class="section-padding bg-base">
         <div class="container">
             <h2 class="section-title fade-in">Our Value</h2>
             
@@ -397,9 +467,9 @@
                     </div>
                 </div>
 
-                <!-- Nutrition Image (Please add nutrition.jpg to folder) -->
+                <!-- Nutrition Image -->
                 <div class="merit-img">
-                    <img src="nutrition.jpg" alt="栄養指導と健康的な食事のイメージ" style="background-color: #ddd;">
+                    <img src="nutrition.jpg" alt="栄養指導と健康的な食事のイメージ" style="background-color: var(--bg-card);">
                 </div>
             </div>
 
@@ -409,8 +479,8 @@
         </div>
     </section>
 
-    <!-- Voices (4 Clients Grid) -->
-    <section id="voice" class="section-padding bg-black">
+    <!-- Voices (Grid Layout) -->
+    <section id="voice" class="section-padding bg-card">
         <div class="container">
             <h2 class="section-title fade-in">Client Voices</h2>
             <div class="voices-grid fade-in">
@@ -476,7 +546,7 @@
     </section>
 
     <!-- Flow & Price -->
-    <section id="price" class="section-padding bg-dark">
+    <section id="price" class="section-padding bg-base">
         <div class="container">
             <h2 class="section-title fade-in">Flow & Price</h2>
             
@@ -501,6 +571,7 @@
                 <div class="price-card">
                     <span class="price-tag">Basic Plan</span>
                     <h3 class="price-name">パーソナル栄養<br>コーチングプラン</h3>
+                    <div class="price-amount">200,000<span style="font-size:1rem; font-weight:400; color:var(--text-main);">yen〜</span></div>
                     <ul class="price-list">
                         <li><i class="fas fa-check"></i> 食事・栄養コーチング</li>
                         <li><i class="fas fa-check"></i> 週1回オンラインセッション</li>
@@ -514,6 +585,7 @@
                 <div class="price-card advance">
                     <span class="price-tag">Advance Plan</span>
                     <h3 class="price-name">アドバンスプラン<br>トータルサポート</h3>
+                    <div class="price-amount">300,000<span style="font-size:1rem; font-weight:400; color:var(--text-main);">yen〜</span></div>
                     <ul class="price-list">
                         <li><i class="fas fa-check"></i> <strong>毎日の食事栄養 徹底管理</strong></li>
                         <li><i class="fas fa-check"></i> 3ヶ月継続コーチング</li>
@@ -536,7 +608,7 @@
                 まずは無料カウンセリングにて、あなたのお悩みをお聞かせください。<br>
                 無理な勧誘は一切いたしません。
             </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn btn-outline">フォームから問い合わせる</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn-outline">フォームから問い合わせる</a>
             
             <div class="footer-sns" style="margin-top: 50px;">
                 <!-- Instagram -->
