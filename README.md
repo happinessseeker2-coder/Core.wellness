@@ -1,8 +1,10 @@
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <!-- 以下にプロジェクト説明や使い方を続けてください -->    <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Designer | Daiki Oikawa & munetsugu Tomizawa</title>
-    <meta name="description" content="本質から整える健康を。追川大輝と富沢心乙による、経営者・プロフェッショナルのためのウェルネスプログラム。">
+    <title>Wellness Designer | For Pilates Instructors</title>
+    <meta name="description" content="ピラティスインストラクターのための栄養・ウェルネスプログラム。スキル向上と顧客獲得、そして自身の健康を叶える。">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +15,21 @@
     <style>
         /* === CSS Variables === */
         :root {
-            /* 写真の夕日/朝日に合わせた、温かみのあるカラーパレット */
-            --bg-black: #1c1c1a;       /* 墨色 */
-            --bg-dark-gray: #2a2a28;   /* チャコール */
-            --bg-light: #f2f0eb;       /* 生成り色 */
-            --text-white: #f7f7f4;     
-            --text-black: #3a3a38;     
-            --text-sub: #9e9e9b;       
-            --accent: #bfa588;         /* ブロンズゴールド */
-            --accent-hover: #a88f72;   
+            --bg-black: #1c1c1a;
+            --bg-dark-gray: #2a2a28;
+            --bg-light: #f2f0eb;
+            --text-white: #f7f7f4;
+            --text-black: #3a3a38;
+            --text-sub: #9e9e9b;
+            --accent: #bfa588;         /* 高級感のあるブロンズ（装飾用） */
+            
+            /* 【変更点】脳が押しやすいと感じる「ビタミンオレンジ」 */
+            --btn-color: #FF8C00;       
+            --btn-hover: #E07B00;
+            
             --gradient: linear-gradient(135deg, #1c1c1a 0%, #333330 100%);
-            --header-h: 70px;![代替テキスト]
+            --header-h: 70px;
+        }
 
         /* === Reset & Base === */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -58,21 +64,26 @@
         .bg-gradient { background: var(--gradient); }
 
         /* === Components === */
+        
+        /* CTA Button (Orange) */
         .btn {
-            display: inline-block; padding: 14px 40px; 
-            background-color: var(--accent); color: #1c1c1a;
-            font-weight: 700; font-size: 0.95rem; border-radius: 50px; 
+            display: inline-block; padding: 16px 45px; 
+            background-color: var(--btn-color); color: #fff; /* 白文字で視認性UP */
+            font-weight: 700; font-size: 1rem; border-radius: 50px; 
             letter-spacing: 0.05em; transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(191, 165, 136, 0.3);
-            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+            text-align: center; border: none;
         }
         .btn:hover { 
-            background-color: var(--accent-hover); 
+            background-color: var(--btn-hover); 
             transform: translateY(-2px); 
-            box-shadow: 0 6px 20px rgba(191, 165, 136, 0.5); 
+            box-shadow: 0 6px 20px rgba(255, 140, 0, 0.6); 
         }
+
+        /* Secondary Button (Outline) */
         .btn-outline {
-            background: transparent; border: 1px solid var(--accent); color: var(--accent);
+            background: transparent; border: 2px solid var(--accent); color: var(--accent);
+            padding: 14px 40px; font-weight: 700; border-radius: 50px;
         }
         .btn-outline:hover { background: var(--accent); color: #1c1c1a; }
 
@@ -88,10 +99,10 @@
         /* Fixed CTA */
         .fixed-cta {
             position: fixed; bottom: 30px; right: 30px; z-index: 990;
-            background: var(--accent); color: #1c1c1a;
+            background: var(--btn-color); color: #fff;
             width: 60px; height: 60px; border-radius: 50%;
             display: flex; justify-content: center; align-items: center;
-            box-shadow: 0 5px 20px rgba(191, 165, 136, 0.4);
+            box-shadow: 0 5px 20px rgba(255, 140, 0, 0.5);
             font-size: 1.5rem; transition: 0.3s;
         }
         .fixed-cta:hover { transform: scale(1.1); }
@@ -108,7 +119,7 @@
             position: fixed; top: 0; left: 0; width: 100%; height: var(--header-h);
             display: flex; justify-content: space-between; align-items: center;
             padding: 0 5%; z-index: 1000;
-            background: rgba(28, 28, 26, 0.8);
+            background: rgba(28, 28, 26, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
@@ -136,23 +147,24 @@
             .nav-link { font-size: 1.2rem; }
         }
 
-        /* === Hero Section (自然背景設定) === */
+        /* === Hero Section === */
         .hero {
             height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center;
+            background-image: url('hero.jpg'); /* 自然の背景画像 */
             background-size: cover; background-position: center;
             background-color: var(--bg-black);
         }
         .hero::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            /* 写真が明るいため、文字が見えるように少し濃いめのグラデーションをかけています */
-            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(28,28,26,0.95));
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(28,28,26,0.9));
         }
-        .hero-content { position: relative; z-index: 1; padding: 0 20px; max-width: 800px; }
-        .hero-sub { color: var(--accent); font-weight: 600; letter-spacing: 0.2em; display: block; margin-bottom: 20px; text-transform: uppercase; }
+        .hero-content { position: relative; z-index: 1; padding: 0 20px; max-width: 900px; }
+        .hero-sub { color: var(--accent); font-weight: 600; letter-spacing: 0.1em; display: block; margin-bottom: 20px; font-size: 1.1rem; }
         .hero-title { 
-            font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1.4; font-weight: 700; margin-bottom: 30px;
-            text-shadow: 0 5px 20px rgba(0,0,0,0.9); /* 文字の影を強化して読みやすく */
+            font-size: clamp(1.6rem, 4vw, 2.8rem); line-height: 1.6; font-weight: 700; margin-bottom: 40px;
+            text-shadow: 0 5px 20px rgba(0,0,0,0.9); text-align: left;
         }
+        .hero-title span { display: block; margin-bottom: 15px; }
         
         /* === Profile Section === */
         .person-card {
@@ -160,13 +172,12 @@
         }
         .about-img img { 
             height: 450px; object-fit: cover; border-radius: 4px; 
-            filter: grayscale(20%); transition: 0.5s; 
+            filter: grayscale(10%); transition: 0.5s; 
             background-color: #222;
         }
         .about-img:hover img { filter: grayscale(0%); }
         .role { color: var(--accent); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 15px; }
         .person-card h3 { font-size: 1.8rem; margin-bottom: 20px; }
-        
         .person-card.reverse { grid-template-columns: 1.2fr 0.8fr; }
         .person-card.reverse .about-img { order: 2; }
         .person-card.reverse .about-text { order: 1; }
@@ -175,44 +186,65 @@
             .person-card, .person-card.reverse { grid-template-columns: 1fr; gap: 30px; }
             .person-card.reverse .about-img { order: 0; }
             .about-img img { height: 350px; }
+            .hero-title { text-align: center; }
         }
 
         /* === Philosophy === */
         .philosophy-text { text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
         .philosophy-text strong { color: var(--accent); font-weight: 500; }
 
-        /* === Merit === */
-        .merit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .merit-card {
-            background: var(--text-white); padding: 40px 30px; border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center;
+        /* === Merit (Detail Section) === */
+        .merit-layout {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
         }
-        .merit-icon { font-size: 2.2rem; color: var(--accent); margin-bottom: 20px; }
-        .merit-card h3 { font-size: 1.2rem; margin-bottom: 15px; color: var(--text-black); }
-        .merit-card p { font-size: 0.9rem; color: #666; line-height: 1.8; margin-bottom: 0; }
+        .merit-img img {
+            width: 100%; height: 400px; object-fit: cover; border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .merit-list { display: flex; flex-direction: column; gap: 30px; }
+        .merit-item { display: flex; gap: 20px; align-items: flex-start; }
+        .merit-icon { 
+            width: 60px; height: 60px; background: #fff; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: var(--btn-color); flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .merit-content h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-black); }
+        .merit-content p { font-size: 0.95rem; color: #666; line-height: 1.7; margin-bottom: 0; }
 
-        /* === Voices === */
+        @media (max-width: 900px) {
+            .merit-layout { grid-template-columns: 1fr; }
+            .merit-img { order: 2; }
+            .merit-list { order: 1; }
+        }
+
+        /* === Voices (Grid Layout) === */
+        .voices-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 自動調整グリッド */
+            gap: 20px; /* 隙間調整 */
+        }
         .voice-card {
             background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
-            padding: 40px; border-radius: 8px; max-width: 800px; margin: 0 auto;
+            padding: 30px; border-radius: 8px; height: 100%;
         }
-        .voice-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+        .voice-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
         .voice-avt { 
-            width: 60px; height: 60px; background: #333; border-radius: 50%; 
+            width: 50px; height: 50px; background: #333; border-radius: 50%; 
             display: flex; align-items: center; justify-content: center; color: #fff;
         }
-        .voice-meta h4 { font-size: 1.1rem; margin-bottom: 5px; }
-        .voice-meta span { color: var(--text-sub); font-size: 0.85rem; }
-        .voice-body { font-style: italic; color: var(--text-white); opacity: 0.9; }
+        .voice-meta h4 { font-size: 1rem; margin-bottom: 3px; }
+        .voice-meta span { color: var(--text-sub); font-size: 0.8rem; }
+        .voice-body { font-style: italic; color: var(--text-white); opacity: 0.9; font-size: 0.9rem; }
 
         /* === Flow & Price === */
         .flow-step { 
-            border-left: 2px solid var(--accent); padding-left: 30px; position: relative; margin-bottom: 40px; 
+            border-left: 3px solid var(--btn-color); padding-left: 30px; position: relative; margin-bottom: 40px; 
             max-width: 600px; margin-left: auto; margin-right: auto;
         }
         .flow-step::before {
-            content: ''; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; 
-            background: var(--accent); border-radius: 50%;
+            content: ''; position: absolute; left: -10px; top: 0; width: 16px; height: 16px; 
+            background: var(--btn-color); border-radius: 50%;
         }
         .flow-step h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-white); }
         
@@ -223,25 +255,25 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #eee;
             position: relative; display: flex; flex-direction: column;
         }
-        .price-card.advance { border: 2px solid var(--accent); transform: scale(1.05); z-index: 10; }
+        .price-card.advance { border: 3px solid var(--btn-color); transform: scale(1.03); z-index: 10; }
         @media (max-width: 800px) { .price-card.advance { transform: scale(1); } }
 
         .price-tag { 
             display: inline-block; background: var(--text-black); color: var(--text-white); padding: 5px 15px; 
             border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; 
         }
-        .price-card.advance .price-tag { background: var(--accent); color: var(--bg-black); font-weight: bold; }
+        .price-card.advance .price-tag { background: var(--btn-color); color: #fff; font-weight: bold; }
 
-        .price-amount { font-size: 2.5rem; font-weight: 700; font-family: 'Montserrat', sans-serif; color: var(--text-black); }
-        .price-sub { font-size: 0.9rem; color: #777; margin-bottom: 30px; display: block; }
+        .price-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; color: var(--text-black); }
+        .price-amount { font-size: 2rem; font-weight: 700; font-family: 'Montserrat', sans-serif; color: var(--text-black); margin-bottom: 20px; }
         .price-list { text-align: left; margin-bottom: 40px; padding: 0 10px; flex-grow: 1; }
         .price-list li { margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 8px; font-size: 0.95rem; }
-        .price-list i { color: var(--accent); margin-right: 10px; }
+        .price-list i { color: var(--btn-color); margin-right: 10px; }
 
         /* === Footer === */
         .footer { background: var(--bg-black); padding: 80px 0 30px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; }
-        .footer-sns a { color: var(--text-sub); font-size: 1.5rem; margin: 0 15px; }
-        .footer-sns a:hover { color: var(--accent); }
+        .footer-sns a { color: var(--text-sub); font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+        .footer-sns a:hover { color: var(--btn-color); }
         .copyright { margin-top: 40px; color: var(--text-sub); font-size: 0.75rem; }
 
         /* Animation */
@@ -265,7 +297,7 @@
 
         <nav class="nav-menu" id="navMenu">
             <a href="#about" class="nav-link">About</a>
-            <a href="#merit" class="nav-link">Concept</a>
+            <a href="#merit" class="nav-link">Service</a>
             <a href="#voice" class="nav-link">Voices</a>
             <a href="#price" class="nav-link">Plan</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="nav-link">Contact</a>
@@ -275,31 +307,36 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-sub fade-in">Holistic Wellness Program</span>
+            <span class="hero-sub fade-in">For Pilates Instructors</span>
             <h1 class="hero-title fade-in">
-                あなたの体と心の<br>
-                根本にアプローチし<br>
-                “本質から整える健康” をつくります。
+                ピラティスインストラクターの皆様へ。<br><br>
+                <span style="font-size: 0.6em; font-weight: 500; line-height: 1.8;">
+                講習だけでなく栄養の知識を深めることで、<br>
+                あなたのスキルを飛躍的に向上させ、<br>
+                より多くの顧客獲得に繋げましょう。<br>
+                さらに、あなた自身の健康も守る、<br>
+                真のウェルネスを追求しませんか？
+                </span>
             </h1>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn fade-in">無料カウンセリングを予約</a>
         </div>
     </section>
 
-    <!-- Profile Section (Dark) -->
+    <!-- Profile Section -->
     <section id="about" class="section-padding bg-dark">
         <div class="container">
             <h2 class="section-title fade-in">Professionals</h2>
             
             <div class="person-card fade-in">
                 <div class="about-img">
-                    <名称未設定フォルダ/PHD.JPG>
+                    <img src="profile1.jpg" alt="Daiki Oikawa">
                 </div>
                 <div class="about-text">
                     <h3>追川 大輝</h3>
                     <span class="role">BODY ARCHITECT</span>
                     <p>
-                        「なぜその不調が起きるのか？」を解剖学的に紐解き、感覚ではなく論理で身体を再構築します。
-                        ビジネスパフォーマンスを最大化させるための、疲れない姿勢と機能的な動作を獲得させます。
+                        解剖学に基づいたロジカルなアプローチで、インストラクター自身の身体の使い方の癖を修正。
+                        「指導者としての説得力」を持つ身体作りと、長く働き続けるためのメンテナンス法を伝授します。
                     </p>
                 </div>
             </div>
@@ -312,83 +349,134 @@
                     <h3>富沢 心乙</h3>
                     <span class="role">MIND & LIFE STYLIST</span>
                     <p>
-                        栄養学とメンタルヘルスを融合。一時的なダイエットではなく、
-                        「何を食べるか」「どう休息するか」という生活習慣の根本からアプローチし、
-                        内側から溢れ出るエネルギーを引き出します。
+                        クライアントへの食事アドバイスに自信はありますか？
+                        栄養学に基づいた指導法を習得し、あなた自身の内面も整えることで、
+                        選ばれるインストラクターへと導きます。
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy -->
-    <section class="section-padding bg-gradient">
-        <div class="container fade-in">
-            <h2 class="section-title">Philosophy</h2>
-            <div class="philosophy-text">
-                <p>
-                    私たちが提供するのは、単なるトレーニングや食事指導ではありません。<br>
-                    それは、<strong>生涯の資産となる「自己管理能力」</strong>です。
-                </p>
-                <p>
-                    都市生活の中で乱れがちな自律神経を整え、<br>
-                    本来の自分を取り戻すための時間を、私たちがデザインします。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Merit -->
+    <!-- Merit (Updated with Details & Image) -->
     <section id="merit" class="section-padding bg-light">
         <div class="container">
             <h2 class="section-title fade-in">Our Value</h2>
-            <div class="merit-grid">
-                <div class="merit-card fade-in">
-                    <div class="merit-icon"><i class="fas fa-cubes"></i></div>
-                    <h3>Dual Approach</h3>
-                    <p>身体のプロと心のプロ。二つの視点から多角的に分析し、最短距離で理想の状態へ導きます。</p>
+            
+            <div class="merit-layout fade-in">
+                <!-- Detailed List -->
+                <div class="merit-list">
+                    <div class="merit-item">
+                        <div class="merit-icon"><i class="fas fa-utensils"></i></div>
+                        <div class="merit-content">
+                            <h3>Nutritional Expertise</h3>
+                            <p>
+                                <strong>「食事指導力」の向上</strong><br>
+                                運動だけでは解決できないクライアントの悩みに、栄養面からアプローチ可能に。ダイエットや体質改善の成果が出やすくなり、信頼度が向上します。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="merit-item">
+                        <div class="merit-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="merit-content">
+                            <h3>Client Acquisition</h3>
+                            <p>
+                                <strong>差別化による集客アップ</strong><br>
+                                ピラティス×栄養指導のトータルサポートができるインストラクターは希少です。高単価でも選ばれる強みとなります。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="merit-item">
+                        <div class="merit-icon"><i class="fas fa-heart"></i></div>
+                        <div class="merit-content">
+                            <h3>Self Wellness</h3>
+                            <p>
+                                <strong>あなた自身の健康美</strong><br>
+                                忙しいレッスンの合間でも実践できる栄養管理法を習得。疲れにくい身体と安定したメンタルを手に入れ、長く活躍できる基盤を作ります。
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="merit-card fade-in">
-                    <div class="merit-icon"><i class="fas fa-fingerprint"></i></div>
-                    <h3>Hyper Personalized</h3>
-                    <p>マニュアルは存在しません。あなたのライフスタイル、骨格、嗜好に合わせた完全オーダーメイド。</p>
-                </div>
-                <div class="merit-card fade-in">
-                    <div class="merit-icon"><i class="fas fa-infinity"></i></div>
-                    <h3>Sustainable</h3>
-                    <p>一過性の結果ではなく、プログラム終了後も一生続く「習慣」を定着させます。</p>
+
+                <!-- Nutrition Image (Please add nutrition.jpg to folder) -->
+                <div class="merit-img">
+                    <img src="nutrition.jpg" alt="栄養指導と健康的な食事のイメージ" style="background-color: #ddd;">
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 50px;">
+
+            <div class="text-center" style="margin-top: 60px;">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">詳細を聞いてみる</a>
             </div>
         </div>
     </section>
 
-    <!-- Voices -->
+    <!-- Voices (4 Clients Grid) -->
     <section id="voice" class="section-padding bg-black">
         <div class="container">
             <h2 class="section-title fade-in">Client Voices</h2>
-            <div class="voice-card fade-in">
-                <div class="voice-header">
-                    <div class="voice-avt"><i class="fas fa-user"></i></div>
-                    <div class="voice-meta">
-                        <h4>M.S 様（28歳）</h4>
-                        <span>ピラティストレーナー / 女性</span>
+            <div class="voices-grid fade-in">
+                
+                <!-- Client 1 -->
+                <div class="voice-card">
+                    <div class="voice-header">
+                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-meta">
+                            <h4>M.S 様（28歳）</h4>
+                            <span>ピラティストレーナー</span>
+                        </div>
+                    </div>
+                    <div class="voice-body">
+                        「身体の使い方は分かっているつもりでしたが、追川さんの指導で自分の癖を根本から修正できました。クライアントへのキューイングの質も上がり、自信がつきました。」
                     </div>
                 </div>
-                <div class="voice-body">
-                    <p>
-                        「同業として身体の使い方は分かっているつもりでしたが、追川さんのロジカルな指導には目から鱗でした。
-                        自分の癖を根本から修正できたことで、クライアントへの指導の質も上がりました。
-                        また富沢さんの食事指導のおかげで、忙しい時期のメンタルブレも減り、仕事に集中できています。」
-                    </p>
+
+                <!-- Client 2 -->
+                <div class="voice-card">
+                    <div class="voice-header">
+                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-meta">
+                            <h4>K.T 様（32歳）</h4>
+                            <span>ヨガ・ピラティス講師</span>
+                        </div>
+                    </div>
+                    <div class="voice-body">
+                        「食事指導が苦手でしたが、富沢さんのおかげで理論的にアドバイスできるようになりました。生徒さんのダイエット成功率が上がり、継続率もアップしています！」
+                    </div>
                 </div>
+
+                <!-- Client 3 -->
+                <div class="voice-card">
+                    <div class="voice-header">
+                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-meta">
+                            <h4>A.Y 様（30歳）</h4>
+                            <span>スタジオ経営者</span>
+                        </div>
+                    </div>
+                    <div class="voice-body">
+                        「経営とレッスンの忙しさで自分の食事が疎かになっていましたが、手軽な栄養管理法を学び体調が劇的に良くなりました。肌艶も良くなり生徒さんに褒められます。」
+                    </div>
+                </div>
+
+                <!-- Client 4 -->
+                <div class="voice-card">
+                    <div class="voice-header">
+                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-meta">
+                            <h4>R.N 様（26歳）</h4>
+                            <span>フリーランスインストラクター</span>
+                        </div>
+                    </div>
+                    <div class="voice-body">
+                        「ただの講習ではなく、私のライフスタイルに合わせた実践的な内容でした。LINEでいつでも相談できる安心感があり、モチベーションを維持できました。」
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Price -->
+    <!-- Flow & Price -->
     <section id="price" class="section-padding bg-dark">
         <div class="container">
             <h2 class="section-title fade-in">Flow & Price</h2>
@@ -396,41 +484,43 @@
             <div style="margin-bottom: 80px;" class="fade-in">
                 <div class="flow-step">
                     <h4>Step 1. カウンセリング</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-sub);">現状の課題と目標をヒアリングし、プランを策定します。</p>
+                    <p style="font-size: 0.9rem; color: var(--text-sub);">現状の課題（指導スキル・集客・自身の健康）をヒアリング。</p>
                 </div>
                 <div class="flow-step">
                     <h4>Step 2. プログラム開始</h4>
                     <p style="font-size: 0.9rem; color: var(--text-sub);">週1回のセッションと、毎日のLINEサポートで伴走します。</p>
                 </div>
                 <div class="flow-step">
-                    <h4>Step 3. 卒業・自走</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-sub);">ご自身でコントロールできる状態を目指し、卒業となります。</p>
+                    <h4>Step 3. スキル習得・卒業</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-sub);">一生モノの知識と習慣を身につけ、さらに活躍できる状態へ。</p>
                 </div>
             </div>
 
             <div class="price-container fade-in">
                 
+                <!-- Plan 1 -->
                 <div class="price-card">
-                    <span class="price-tag">Normal Plan</span>
-                    <div class="price-amount">200,000<span style="font-size:1rem; font-weight:400;">yen〜</span></div>
-                    <span class="price-sub">スタンダードサポート</span>
+                    <span class="price-tag">Basic Plan</span>
+                    <h3 class="price-name">パーソナル栄養<br>コーチングプラン</h3>
                     <ul class="price-list">
-                        <li><i class="fas fa-check"></i> パーソナルトレーニング</li>
-                        <li><i class="fas fa-check"></i> 食事・栄養アドバイス</li>
-                        <li><i class="fas fa-check"></i> LINE相談サポート</li>
+                        <li><i class="fas fa-check"></i> 食事・栄養コーチング</li>
+                        <li><i class="fas fa-check"></i> 週1回オンラインセッション</li>
+                        <li><i class="fas fa-check"></i> 期間：3ヶ月継続</li>
+                        <li><i class="fas fa-check"></i> 自身の健康管理と指導力UP</li>
                     </ul>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">無料相談に申し込む</a>
                 </div>
 
+                <!-- Plan 2 -->
                 <div class="price-card advance">
                     <span class="price-tag">Advance Plan</span>
-                    <div class="price-amount">300,000<span style="font-size:1rem; font-weight:400;">yen〜</span></div>
-                    <span class="price-sub">3ヶ月集中トータルサポート</span>
+                    <h3 class="price-name">アドバンスプラン<br>トータルサポート</h3>
                     <ul class="price-list">
-                        <li><i class="fas fa-check"></i> パーソナルトレーニング (全12回)</li>
-                        <li><i class="fas fa-check"></i> 毎日の食事・栄養徹底管理</li>
-                        <li><i class="fas fa-check"></i> マインドセットコーチング</li>
-                        <li><i class="fas fa-check"></i> LINE相談 無制限</li>
+                        <li><i class="fas fa-check"></i> <strong>毎日の食事栄養 徹底管理</strong></li>
+                        <li><i class="fas fa-check"></i> 3ヶ月継続コーチング</li>
+                        <li><i class="fas fa-check"></i> 週1回 Zoom相談</li>
+                        <li><i class="fas fa-check"></i> <strong>LINE相談 無制限</strong></li>
+                        <li><i class="fas fa-check"></i> パーソナルトレーニング連携</li>
                     </ul>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">無料相談に申し込む</a>
                 </div>
@@ -450,13 +540,16 @@
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn btn-outline">フォームから問い合わせる</a>
             
             <div class="footer-sns" style="margin-top: 50px;">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-line"></i></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/core.wellness.official?igsh=MW0yNnRpNzFsMmtrcA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                <!-- LINE -->
+                <a href="https://line.me/R/ti/p/@Vo8zA80" target="_blank"><i class="fab fa-line"></i></a>
             </div>
             <p class="copyright">&copy; 2024 Wellness Designer. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
@@ -487,3 +580,5 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+</body>
+</html>
