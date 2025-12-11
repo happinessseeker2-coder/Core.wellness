@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness Designer | 富沢心乙</title>
+    <title>Wellness Designer | 追川大輝</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -670,7 +670,8 @@
         <div class="about-grid">
             <div class="fade-in-section">
                 <!-- 画像ファイル名は適切なものに変更してください -->
-                <img src="tomizawa.jpg" alt="富沢心乙" class="about-img">
+                <img src="tomizawa.jpg" alt="追川大輝" class="<img width="645" height="1398" alt="IMG_6992 (1)" src="https://github.com/user-attachments/assets/e484dd9a-4241-4961-8c1c-8ddee7a10deb" />
+">
             </div>
             <div class="about-text fade-in-section">
                 <h3>富沢心乙 <a href="https://profu.link/u/corewellness" target="_blank" style="font-size: 0.6em; color: var(--accent-color); margin-left: 10px; vertical-align: middle; border-bottom: 1px dashed var(--accent-color);">詳細プロフィールへ</a></h3>
