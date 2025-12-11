@@ -84,7 +84,7 @@
             filter: brightness(1.1); /* ホバー時に少し輝く */
         }
 
-        /* Outline Button (Sage Green) */
+        /* Outline Button (gold-gradient)*/
         .btn-outline {
             background: transparent; border: 1px solid var(--sage-green); color: var(--text-main);
             padding: 14px 40px; font-weight: 700; border-radius: 50px;
