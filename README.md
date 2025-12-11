@@ -488,11 +488,3 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
-</body>
-</html># Wellness Designer
-
-![チーム写真](./images/hero.jpg "チーム写真")
-
-本質から整える健康を。追川大輝と富沢心乙による、経営者・プロフェッショナルのためのウェルネスプログラム。
-
-<!-- 以下にプロジェクト説明や使い方を続けてください -->
