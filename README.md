@@ -139,7 +139,6 @@
         /* === Hero Section (自然背景設定) === */
         .hero {
             height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center;
-            background-image: url('hero.jpg'); /* ここで画像を指定 */
             background-size: cover; background-position: center;
             background-color: var(--bg-black);
         }
