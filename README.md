@@ -377,26 +377,27 @@
         </div>
 
     </div>
-</section>
        
     <!-- Profile Section -->
-    <section id="about" class="section-padding bg-base">
-        <div class="container">
-            <h2 class="section-title fade-in">Professionals</h2>
-            
-            <div class="person-card fade-in">
-                <div class="about-img">
-                    <img src="profile1.jpg" alt="Daiki Oikawa">
-                </div>
-                <div class="about-text">
-                    <h3>追川 大輝</h3>
-                    <span class="role">BODY ARCHITECT</span>
-                    <p>
-                        解剖学に基づいたロジカルなアプローチで、インストラクター自身の身体の使い方の癖を修正。
-                        「指導者としての説得力」を持つ身体作りと、長く働き続けるためのメンテナンス法を伝授します。
-                    </p>
-                </div>
+   <section id="about" class="section-padding bg-base">
+    <div class="container">
+        <h2 class="section-title fade-in">Professionals</h2>
+        
+        <div class="person-card fade-in">
+            <div class="about-img">
+                <img src="PHD.jpg" alt="Daiki Oikawa">
             </div>
+            <div class="about-text">
+                <h3>追川 大輝</h3>
+                <span class="role">BODY ARCHITECT</span>
+                <p>
+                    解剖学に基づいたロジカルなアプローチで、インストラクター自身の身体の使い方の癖を修正。
+                    「指導者としての説得力」を持つ身体作りと、長く働き続けるためのメンテナンス法を伝授します。
+                </p>
+            </div>
+        </div>
+
+    </div>
 
             <div class="person-card reverse fade-in">
                 <div class="about-img">
