@@ -357,9 +357,7 @@
         </nav>
     </header>
 
-   <section class="hero">
-    <div class="hero-content" style="text-align: center;">
-        
+  
       <section class="hero">
     <div class="hero-content" style="text-align: center;">
         
