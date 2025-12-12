@@ -357,18 +357,19 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="hero-sub fade-in">For Pilates Instructors</span>
-            <h1 class="hero-title fade-in">
-                ピラティスインストラクターの皆様へ。<br><br>
-                <span style="font-size: 0.6em; font-weight: 500; line-height: 1.8; color: var(--text-main);">
-                3ヶ月で、栄養の基礎から“本質の応用”まで確実に身につく<br>
-                点の知識ではなく、何を選び、なぜ選ぶかまで説明できるインストラクターへ<br>
-                動きと栄養を一貫して導ける力を手に入れる<br>
-                より多くの顧客を手に入れましょう。
-                </span>
+   <section class="hero">
+    <div class="hero-content">
+        <span class="hero-sub fade-in">For Pilates Instructors</span>
+        <h1 class="hero-title fade-in" style="text-align: center;"> ピラティスインストラクターの皆様へ。<br><br>
+            <span style="display: block; text-align: center; font-size: 0.6em; font-weight: 600; line-height: 1.8; color: var(--text-main);">
+            3ヶ月で、栄養の基礎から“本質の応用”まで確実に身につく<br>
+            点の知識ではなく、何を選び、なぜ選ぶかまで説明できるインストラクターへ<br>
+            動きと栄養を一貫して導ける力を手に入れる<br>
+            より多くの顧客を手に入れましょう。
+            </span>
+        </h1>
+    </div>
+</section>
             </h1>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn fade-in">無料カウンセリングを予約</a>
         </div>
