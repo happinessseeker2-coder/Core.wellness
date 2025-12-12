@@ -337,35 +337,32 @@
 </head>
 <body>
 
-    <!-- Floating CTA -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="fixed-cta"><i class="far fa-envelope"></i></a>
+   <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="fixed-cta"><i class="far fa-envelope"></i></a>
 
-    <!-- Header -->
-    <header class="header">
-        <a href="#" class="logo">Wellness<span>Designer</span></a>
-        
-        <div class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </div>
+<header class="header">
+    <a href="#" class="logo">Wellness<span>Designer</span></a>
+    
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
 
-        <nav class="nav-menu" id="navMenu">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#merit" class="nav-link">Service</a>
-            <a href="#voice" class="nav-link">Voices</a>
-            <a href="#price" class="nav-link">Plan</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="nav-link">Contact</a>
-        </nav>
-    </header>
+    <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#merit" class="nav-link">Service</a>
+        <a href="#voice" class="nav-link">Voices</a>
+        <a href="#price" class="nav-link">Plan</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="nav-link">Contact</a>
+    </nav>
+</header>
 
-  
-      <section class="hero">
+<section class="hero">
     <div class="hero-content" style="text-align: center;">
         
         <span class="hero-sub fade-in" style="display: inline-block;">For Pilates Instructors</span>
         
         <h1 class="hero-title fade-in" style="text-align: center;">
             ピラティスインストラクターの皆様へ。<br><br>
-            <span style="display: block; font-size: 0.6em; font-weight: 600; line-height: 1.8; color: var(--text-main);">
+            <span style="display: inline-block; border: 2px solid #c5a47e; padding: 30px; margin-top: 10px; font-size: 0.6em; font-weight: 600; line-height: 1.8; color: var(--text-main);">
                 3ヶ月で、栄養の基礎から“本質の応用”まで確実に身につく<br>
                 点の知識ではなく、何を選び、なぜ選ぶかまで説明できるインストラクターへ<br>
                 動きと栄養を一貫して導ける力を手に入れる<br>
@@ -380,7 +377,6 @@
         </div>
 
     </div>
-</section>
 </section>
        
     <!-- Profile Section -->
