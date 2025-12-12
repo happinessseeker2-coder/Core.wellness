@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Wellness Designer | For Pilates Instructors</title>
-     <link rel="icon" type="image/png" href="/Core.wellness/mmm.png">
-    <link rel="apple-touch-icon" href="/Core.wellness/mmm.png">
+      <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="apple-touch-icon" href="./favicon.png">
 
      <meta name="description" content="ピラティスインストラクターのための栄養・ウェルネスプログラム。スキル向上と顧客獲得、そして自身の健康を叶える。">
 
