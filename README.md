@@ -362,11 +362,12 @@
         
       <section class="hero">
     <div class="hero-content" style="text-align: center;">
+        
         <span class="hero-sub fade-in" style="display: inline-block;">For Pilates Instructors</span>
         
         <h1 class="hero-title fade-in" style="text-align: center;">
             ピラティスインストラクターの皆様へ。<br><br>
-            <span style="display: inline-block; border: 2px solid #c5a47e; padding: 30px; margin-top: 10px; font-size: 0.6em; font-weight: 600; line-height: 1.8; color: var(--text-main);">
+            <span style="display: block; font-size: 0.6em; font-weight: 600; line-height: 1.8; color: var(--text-main);">
                 3ヶ月で、栄養の基礎から“本質の応用”まで確実に身につく<br>
                 点の知識ではなく、何を選び、なぜ選ぶかまで説明できるインストラクターへ<br>
                 動きと栄養を一貫して導ける力を手に入れる<br>
@@ -381,6 +382,7 @@
         </div>
 
     </div>
+</section>
 </section>
        
     <!-- Profile Section -->
