@@ -1,5 +1,4 @@
-
-
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -377,9 +376,9 @@
         </div>
 
     </div>
+</section>
        
-    <!-- Profile Section -->
-   <section id="about" class="section-padding bg-base">
+    <section id="about" class="section-padding bg-base">
     <div class="container">
         <h2 class="section-title fade-in">Professionals</h2>
         
@@ -397,26 +396,23 @@
             </div>
         </div>
 
-    </div>
-
-            <div class="person-card reverse fade-in">
-                <div class="about-img">
-                    <img src="profile2.jpg" alt="Kokona Tomizawa">
-                </div>
-                <div class="about-text">
-                    <h3>富沢 心乙</h3>
-                    <span class="role">MIND & LIFE STYLIST</span>
-                    <p>
-                        クライアントへの食事アドバイスに自信はありますか？
-                        栄養学に基づいた指導法を習得し、あなた自身の内面も整えることで、
-                        選ばれるインストラクターへと導きます。
-                    </p>
-                </div>
+        <div class="person-card reverse fade-in">
+            <div class="about-img">
+                <img src="profile2.jpg" alt="Kokona Tomizawa">
+            </div>
+            <div class="about-text">
+                <h3>富沢 心乙</h3>
+                <span class="role">MIND & LIFE STYLIST</span>
+                <p>
+                    クライアントへの食事アドバイスに自信はありますか？
+                    栄養学に基づいた指導法を習得し、あなた自身の内面も整えることで、
+                    選ばれるインストラクターへと導きます。
+                </p>
             </div>
         </div>
-    </section>
 
-    <!-- Philosophy -->
+    </div></section>
+
     <section class="section-padding bg-card">
         <div class="container fade-in">
             <h2 class="section-title">Philosophy</h2>
@@ -433,13 +429,11 @@
         </div>
     </section>
 
-    <!-- Merit (Detail Section) -->
     <section id="merit" class="section-padding bg-base">
         <div class="container">
             <h2 class="section-title fade-in">Our Value</h2>
             
             <div class="merit-layout fade-in">
-                <!-- Detailed List -->
                 <div class="merit-list">
                     <div class="merit-item">
                         <div class="merit-icon"><i class="fas fa-utensils"></i></div>
@@ -473,25 +467,22 @@
                     </div>
                 </div>
 
-                <!-- Nutrition Image -->
                 <div class="merit-img">
                     <img src="nutrition.jpg" alt="栄養指導と健康的な食事のイメージ" style="background-color: var(--bg-card);">
                 </div>
             </div>
 
-            <div class="text-center" style="margin-top: 60px;">
+            <div class="text-center" style="margin-top: 60px; text-align: center;">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">詳細を聞いてみる</a>
             </div>
         </div>
     </section>
 
-    <!-- Voices (Grid Layout) -->
     <section id="voice" class="section-padding bg-card">
         <div class="container">
             <h2 class="section-title fade-in">Client Voices</h2>
             <div class="voices-grid fade-in">
                 
-                <!-- Client 1 -->
                 <div class="voice-card">
                     <div class="voice-header">
                         <div class="voice-avt"><i class="fas fa-user"></i></div>
@@ -505,7 +496,6 @@
                     </div>
                 </div>
 
-                <!-- Client 2 -->
                 <div class="voice-card">
                     <div class="voice-header">
                         <div class="voice-avt"><i class="fas fa-user"></i></div>
@@ -519,7 +509,6 @@
                     </div>
                 </div>
 
-                <!-- Client 3 -->
                 <div class="voice-card">
                     <div class="voice-header">
                         <div class="voice-avt"><i class="fas fa-user"></i></div>
@@ -533,7 +522,6 @@
                     </div>
                 </div>
 
-                <!-- Client 4 -->
                 <div class="voice-card">
                     <div class="voice-header">
                         <div class="voice-avt"><i class="fas fa-user"></i></div>
@@ -551,7 +539,6 @@
         </div>
     </section>
 
-    <!-- Flow & Price -->
     <section id="price" class="section-padding bg-base">
         <div class="container">
             <h2 class="section-title fade-in">Flow & Price</h2>
@@ -567,95 +554,4 @@
                 </div>
                 <div class="flow-step">
                     <h4>Step 3. スキル習得・卒業</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-sub);">一生モノの知識と習慣を身につけ、さらに活躍できる状態へ。</p>
-                </div>
-            </div>
-
-            <div class="price-container fade-in">
-                
-                <!-- Plan 1 -->
-                <div class="price-card">
-                    <span class="price-tag">Basic Plan</span>
-                    <h3 class="price-name">パーソナル栄養<br>コーチングプラン</h3>
-                    <div class="price-amount">200,000<span style="font-size:1rem; font-weight:400; color:var(--text-main);">yen〜</span></div>
-                    <ul class="price-list">
-                        <li><i class="fas fa-check"></i> 食事・栄養コーチング</li>
-                        <li><i class="fas fa-check"></i> 週1回オンラインセッション</li>
-                        <li><i class="fas fa-check"></i> 期間：3ヶ月継続</li>
-                        <li><i class="fas fa-check"></i> 自身の健康管理と指導力UP</li>
-                    </ul>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">無料相談に申し込む</a>
-                </div>
-
-                <!-- Plan 2 -->
-                <div class="price-card advance">
-                    <span class="price-tag">Advance Plan</span>
-                    <h3 class="price-name">アドバンスプラン<br>トータルサポート</h3>
-                    <div class="price-amount">300,000<span style="font-size:1rem; font-weight:400; color:var(--text-main);">yen〜</span></div>
-                    <ul class="price-list">
-                        <li><i class="fas fa-check"></i> <strong>毎日の食事栄養 徹底管理</strong></li>
-                        <li><i class="fas fa-check"></i> 3ヶ月継続コーチング</li>
-                        <li><i class="fas fa-check"></i> 週1回 Zoom相談</li>
-                        <li><i class="fas fa-check"></i> <strong>LINE相談 無制限</strong></li>
-                        <li><i class="fas fa-check"></i> パーソナルトレーニング連携</li>
-                    </ul>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">無料相談に申し込む</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container fade-in">
-            <h2 class="section-title" style="margin-bottom: 30px;">Contact</h2>
-            <p style="margin-bottom: 30px; color: var(--text-sub);">
-                まずは無料カウンセリングにて、あなたのお悩みをお聞かせください。<br>
-                無理な勧誘は一切いたしません。
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn-outline">フォームから問い合わせる</a>
-            
-            <div class="footer-sns" style="margin-top: 50px;">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/core.wellness.official?igsh=MW0yNnRpNzFsMmtrcA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-                <!-- LINE -->
-                <a href="https://line.me/R/ti/p/@Vo8zA80" target="_blank"><i class="fab fa-line"></i></a>
-            </div>
-            <p class="copyright">&copy; 2024 Wellness Designer. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.querySelector('i').classList.add('fa-bars');
-                menuToggle.querySelector('i').classList.remove('fa-times');
-            });
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+                    <p style="font-size: 0.9rem;
