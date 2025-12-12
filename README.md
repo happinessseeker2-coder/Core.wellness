@@ -367,9 +367,7 @@
             動きと栄養を一貫して導ける力を手に入れる<br>
             より多くの顧客を手に入れましょう。
             </span>
-        </h1>
-    </div>
-</section>
+      
             </h1>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn fade-in">無料カウンセリングを予約</a>
         </div>
