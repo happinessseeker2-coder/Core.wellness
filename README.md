@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -472,7 +471,7 @@
                 </div>
 
                 <div class="merit-img">
-                    <img src="nutrition.jpg" alt="栄養指導と健康的な食事のイメージ" style="background-color: var(--bg-card);">
+                   <img src="IMG_7192.jpg" alt="栄養指導と健康的な食事のイメージ" style="background-color: var(--bg-card);">
                 </div>
             </div>
 
