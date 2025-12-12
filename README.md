@@ -329,8 +329,7 @@
         .copyright { margin-top: 40px; color: var(--text-sub); font-size: 0.75rem; }
 
         /* Animation */
-        .fade-in { opacity: 0; transform: translateY(30px); transition: 1s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .fade-in { opacity: 1; transform: none; transition: none; }
 
     </style>
 </head>
