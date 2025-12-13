@@ -1,24 +1,21 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-  <head>
-   
     
     <title>Wellness Designer | For Pilates Instructors</title>
     
-    <!-- ▼ ロレックス風アイコンの設定 ▼ -->
+    <!-- ▼ アイコン（ファビコン）の設定 ▼ -->
     <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="apple-touch-icon" href="./favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
 
-    
-     <meta name="description" content="ピラティスインストラクターのための栄養・ウェルネスプログラム。スキル向上と顧客獲得、そして自身の健康を叶える。">
+    <meta name="description" content="ピラティスインストラクターのための栄養・ウェルネスプログラム。スキル向上と顧客獲得、そして自身の健康を叶える。">
 
+    <!-- ▼ フォントの読み込み（Shippori Minchoを追加） ▼ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -27,18 +24,18 @@
         :root {
             /* ベース：深遠・安定・知性 */
             --bg-base: #1A1F1D; 
-            --bg-card: #232926; /* ベースより少し明るい、カード用 */
+            --bg-card: #232926; 
             
-            /* テキスト：清潔・明瞭（可読性重視） */
+            /* テキスト */
             --text-main: #E6E6E6;
-            --text-sub: #B0B5B2; /* 少し緑がかったグレー */
-            --text-dark: #1A1F1D; /* ゴールド背景用の濃い文字 */
+            --text-sub: #B0B5B2; 
+            --text-dark: #1A1F1D; 
 
-            /* アクセント（金）：富・成功・高品質 */
+            /* アクセント（金） */
             --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #B38728 100%);
-            --gold-text: #D4AF37; /* 文字として使う場合の単色ゴールド */
+            --gold-text: #D4AF37; 
 
-            /* サブアクセント（セージグリーン）：調和・自然 */
+            /* サブアクセント（セージグリーン） */
             --sage-green: #5D7266;
             
             --header-h: 70px;
@@ -71,17 +68,14 @@
         }
         .section-padding { padding: 100px 0; }
         
-        /* 背景クラスの再定義 */
         .bg-base { background-color: var(--bg-base); }
         .bg-card { background-color: var(--bg-card); }
         
         /* === Components === */
-        
-        /* Gold Button (CTA) */
         .btn {
             display: inline-block; padding: 16px 45px; 
             background: var(--gold-gradient); 
-            color: var(--text-dark); /* 金背景には黒文字で可読性と高級感を */
+            color: var(--text-dark); 
             font-weight: 700; font-size: 1rem; border-radius: 50px; 
             letter-spacing: 0.05em; transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(191, 149, 63, 0.3);
@@ -90,28 +84,24 @@
         .btn:hover { 
             transform: translateY(-2px); 
             box-shadow: 0 6px 25px rgba(191, 149, 63, 0.5); 
-            filter: brightness(1.1); /* ホバー時に少し輝く */
+            filter: brightness(1.1); 
         }
 
-        /* Outline Button (Sage Green) */
         .btn-outline {
             background: transparent; border: 1px solid var(--sage-green); color: var(--text-main);
             padding: 14px 40px; font-weight: 700; border-radius: 50px;
         }
         .btn-outline:hover { background: var(--sage-green); color: var(--text-main); }
 
-        /* Section Titles */
         .section-title { 
             font-size: clamp(1.8rem, 4vw, 2.4rem); margin-bottom: 60px; 
             text-align: center; position: relative; color: var(--text-main);
         }
-        /* 金色のアンダーライン */
         .section-title::after { 
             content: ''; display: block; width: 60px; height: 3px; 
             background: var(--gold-gradient); margin: 20px auto 0; 
         }
 
-        /* Fixed CTA */
         .fixed-cta {
             position: fixed; bottom: 30px; right: 30px; z-index: 990;
             background: var(--gold-gradient); color: var(--text-dark);
@@ -134,12 +124,12 @@
             position: fixed; top: 0; left: 0; width: 100%; height: var(--header-h);
             display: flex; justify-content: space-between; align-items: center;
             padding: 0 5%; z-index: 1000;
-            background: rgba(26, 31, 29, 0.9); /* Base color semi-transparent */
+            background: rgba(26, 31, 29, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
         .logo { font-size: 1.4rem; font-weight: 700; color: var(--text-main); }
-        .logo span { color: var(--sage-green); /* アクセントにセージグリーン */ }
+        .logo span { color: var(--sage-green); }
 
         .menu-toggle { display: none; font-size: 1.5rem; color: var(--text-main); cursor: pointer; z-index: 1001; }
         
@@ -172,13 +162,12 @@
         }
         .hero::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            /* Deep Green Black Gradient Overlay */
             background: linear-gradient(to bottom, rgba(26, 31, 29, 0.3), rgba(26, 31, 29, 0.95));
         }
         .hero-content { position: relative; z-index: 1; padding: 0 20px; max-width: 900px; }
         
         .hero-sub { 
-            color: var(--sage-green); /* 自然・調和 */
+            color: var(--sage-green);
             font-weight: 600; letter-spacing: 0.15em; display: block; margin-bottom: 20px; font-size: 1.1rem; 
             text-transform: uppercase;
         }
@@ -189,22 +178,28 @@
         .hero-title span { display: block; margin-bottom: 15px; }
         
         /* === Profile Section === */
-        ./* プロフィール名のデザイン修正 */
-.person-card h3 {
-    font-family: 'Shippori Mincho', serif; /* 明朝体に変更 */
-    font-size: 2.4rem; /* サイズを少し大きく */
-    font-weight: 600;  /* 程よい太さ */
-    margin-bottom: 15px;
-    letter-spacing: 0.15em; /* 文字の間隔を広げて高級感を出す */
-    
-    /* 金色のグラデーションを文字にかける */
-    background: var(--gold-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    /* 万が一グラデーションが効かないブラウザ用 */
-    color: var(--gold-text); 
-}
+        .person-card {
+            display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: center; margin-bottom: 80px;
+            background: rgba(255,255,255,0.02);
+            padding: 30px; border-radius: 12px; border: 1px solid rgba(93, 114, 102, 0.2);
+        }
+
+        /* ▼▼▼ プロフィール名のデザイン（ここを修正しました） ▼▼▼ */
+        .person-card h3 {
+            font-family: 'Shippori Mincho', serif; /* 明朝体 */
+            font-size: 2.4rem; 
+            font-weight: 600;  
+            margin-bottom: 15px;
+            letter-spacing: 0.15em; 
+            
+            /* 金色のグラデーション */
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--gold-text); /* フォールバック */
+        }
+        /* ▲▲▲ 修正ここまで ▲▲▲ */
+
         .about-img img { 
             height: 450px; object-fit: cover; border-radius: 4px; 
             filter: grayscale(20%); transition: 0.5s; 
@@ -212,7 +207,6 @@
         }
         .about-img:hover img { filter: grayscale(0%); }
         .role { color: var(--sage-green); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; display: block; margin-bottom: 15px; }
-        .person-card h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--gold-text); } /* 名前を金文字に */
         
         .person-card.reverse { grid-template-columns: 1.2fr 0.8fr; }
         .person-card.reverse .about-img { order: 2; }
@@ -234,7 +228,7 @@
             font-weight: 700; 
         }
 
-        /* === Merit (Detail Section) === */
+        /* === Merit === */
         .merit-layout {
             display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;
         }
@@ -248,12 +242,12 @@
             padding: 20px; border-radius: 8px;
             transition: 0.3s;
         }
-        .merit-item:hover { background: rgba(93, 114, 102, 0.1); } /* セージグリーンの背景ホバー */
+        .merit-item:hover { background: rgba(93, 114, 102, 0.1); } 
         
         .merit-icon { 
             width: 60px; height: 60px; 
-            background: var(--bg-card); /* カード色 */
-            border: 1px solid var(--sage-green); /* セージグリーンの枠 */
+            background: var(--bg-card);
+            border: 1px solid var(--sage-green);
             border-radius: 50%; 
             display: flex; align-items: center; justify-content: center;
             font-size: 1.5rem; color: var(--sage-green); flex-shrink: 0;
@@ -268,7 +262,7 @@
             .merit-list { order: 1; }
         }
 
-        /* === Voices (Grid Layout) === */
+        /* === Voices === */
         .voices-grid {
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -276,7 +270,7 @@
         }
         .voice-card {
             background: var(--bg-card); 
-            border: 1px solid rgba(255,255,255,0.05); /* 控えめな枠線 */
+            border: 1px solid rgba(255,255,255,0.05);
             padding: 30px; border-radius: 8px; height: 100%;
             transition: 0.3s;
         }
@@ -300,7 +294,7 @@
         .flow-step::before {
             content: ''; position: absolute; left: -10px; top: 0; width: 16px; height: 16px; 
             background: var(--sage-green); border-radius: 50%;
-            border: 2px solid var(--bg-base); /* 穴あき効果 */
+            border: 2px solid var(--bg-base);
         }
         .flow-step h4 { font-size: 1.2rem; margin-bottom: 10px; color: var(--gold-text); }
         
@@ -311,7 +305,6 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05);
             position: relative; display: flex; flex-direction: column;
         }
-        /* アドバンスプラン（金枠） */
         .price-card.advance { 
             border: 2px solid transparent;
             background-image: linear-gradient(var(--bg-card), var(--bg-card)), var(--gold-gradient);
@@ -332,7 +325,6 @@
         .price-amount { 
             font-size: 2.2rem; font-weight: 700; font-family: 'Montserrat', sans-serif; 
             margin-bottom: 20px;
-            /* 数字を金グラデーションに */
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -341,7 +333,7 @@
         .price-list { text-align: left; margin-bottom: 40px; padding: 0 10px; flex-grow: 1; }
         .price-list li { margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; font-size: 0.95rem; color: var(--text-sub); }
         .price-list i { color: var(--sage-green); margin-right: 10px; }
-        .price-card.advance .price-list i { color: var(--gold-text); } /* アドバンスのチェックは金 */
+        .price-card.advance .price-list i { color: var(--gold-text); }
 
         /* === Footer === */
         .footer { background: #111; padding: 80px 0 30px; border-top: 1px solid var(--sage-green); text-align: center; }
@@ -352,7 +344,6 @@
         /* Animation */
         .fade-in { opacity: 0; transform: translateY(30px); transition: 1s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-
     </style>
 </head>
 <body>
@@ -406,7 +397,7 @@
             
             <div class="person-card fade-in">
                 <div class="about-img">
-                    <!-- 追川大輝さんの画像ファイル名を変更 -->
+                    <!-- 追川大輝さんの画像 -->
                     <img src="PHD.jpg" alt="Daiki Oikawa">
                 </div>
                 <div class="about-text">
@@ -421,7 +412,7 @@
 
             <div class="person-card reverse fade-in">
                 <div class="about-img">
-                    <!-- 富沢心乙さんの画像ファイル名を変更 -->
+                    <!-- 富沢心乙さんの画像 -->
                     <img src="PHM.jpg" alt="Kokona Tomizawa">
                 </div>
                 <div class="about-text">
@@ -573,7 +564,6 @@
     
     </section>
 
-    <!-- Flow & Price Section (Completing the cut-off part) -->
     <section id="price" class="section-padding bg-base">
         <div class="container">
             <h2 class="section-title fade-in">Flow & Price</h2>
@@ -595,7 +585,6 @@
 
             <div class="price-container fade-in">
                 
-                <!-- Plan 1 -->
                 <div class="price-card">
                     <span class="price-tag">Basic Plan</span>
                     <h3 class="price-name">パーソナル栄養<br>コーチングプラン</h3>
@@ -609,7 +598,6 @@
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScIAD-W3wwlx3-h5BYWnTISMvaoD_p2huWuIAT3mQ6KkWsFjA/viewform?usp=header" target="_blank" class="btn">無料相談に申し込む</a>
                 </div>
 
-                <!-- Plan 2 -->
                 <div class="price-card advance">
                     <span class="price-tag">Advance Plan</span>
                     <h3 class="price-name">アドバンスプラン<br>トータルサポート</h3>
