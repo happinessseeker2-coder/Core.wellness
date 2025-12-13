@@ -11,8 +11,7 @@
     <!-- ▼ ロレックス風アイコンの設定 ▼ -->
     <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="apple-touch-icon" href="./favicon.png">
-    
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
 
     
      <meta name="description" content="ピラティスインストラクターのための栄養・ウェルネスプログラム。スキル向上と顧客獲得、そして自身の健康を叶える。">
@@ -190,11 +189,22 @@
         .hero-title span { display: block; margin-bottom: 15px; }
         
         /* === Profile Section === */
-        .person-card {
-            display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: center; margin-bottom: 80px;
-            background: rgba(255,255,255,0.02); /* わずかに背景を入れてカード化 */
-            padding: 30px; border-radius: 12px; border: 1px solid rgba(93, 114, 102, 0.2); /* セージグリーンの薄い枠 */
-        }
+        ./* プロフィール名のデザイン修正 */
+.person-card h3 {
+    font-family: 'Shippori Mincho', serif; /* 明朝体に変更 */
+    font-size: 2.4rem; /* サイズを少し大きく */
+    font-weight: 600;  /* 程よい太さ */
+    margin-bottom: 15px;
+    letter-spacing: 0.15em; /* 文字の間隔を広げて高級感を出す */
+    
+    /* 金色のグラデーションを文字にかける */
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* 万が一グラデーションが効かないブラウザ用 */
+    color: var(--gold-text); 
+}
         .about-img img { 
             height: 450px; object-fit: cover; border-radius: 4px; 
             filter: grayscale(20%); transition: 0.5s; 
