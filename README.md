@@ -493,14 +493,16 @@
         </div>
     </section>
 
-    <section id="voice" class="section-padding bg-card">
+   <section id="voice" class="section-padding bg-card">
         <div class="container">
             <h2 class="section-title fade-in">Client Voices</h2>
             <div class="voices-grid fade-in">
                 
                 <div class="voice-card">
                     <div class="voice-header">
-                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-avt" style="color: #D4AF37; border-color: #D4AF37;">
+                            <i class="fas fa-user"></i>
+                        </div>
                         <div class="voice-meta">
                             <h4>M.S 様（28歳）</h4>
                             <span>ピラティストレーナー</span>
@@ -513,7 +515,9 @@
 
                 <div class="voice-card">
                     <div class="voice-header">
-                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-avt" style="color: #D4AF37; border-color: #D4AF37;">
+                            <i class="fas fa-user"></i>
+                        </div>
                         <div class="voice-meta">
                             <h4>K.T 様（32歳）</h4>
                             <span>ヨガ・ピラティス講師</span>
@@ -526,7 +530,9 @@
 
                 <div class="voice-card">
                     <div class="voice-header">
-                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-avt" style="color: #D4AF37; border-color: #D4AF37;">
+                            <i class="fas fa-user"></i>
+                        </div>
                         <div class="voice-meta">
                             <h4>A.Y 様（30歳）</h4>
                             <span>スタジオ経営者</span>
@@ -539,7 +545,9 @@
 
                 <div class="voice-card">
                     <div class="voice-header">
-                        <div class="voice-avt"><i class="fas fa-user"></i></div>
+                        <div class="voice-avt" style="color: #D4AF37; border-color: #D4AF37;">
+                            <i class="fas fa-user"></i>
+                        </div>
                         <div class="voice-meta">
                             <h4>R.N 様（26歳）</h4>
                             <span>フリーランスインストラクター</span>
@@ -552,6 +560,7 @@
 
             </div>
         </div>
+    
     </section>
 
     <!-- Flow & Price Section (Completing the cut-off part) -->
